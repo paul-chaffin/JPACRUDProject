@@ -38,13 +38,14 @@ class AlbumTest {
 	@AfterEach
 	void tearDown() throws Exception {
 		em.close();
+		album = null;
 	}
 
 	@Test
 	void test_album_mappings() {
 		assertNotNull(album);
-		assertEquals(album.getId(), 1);
-		assertEquals(album.getTitle(), "Siamese Dream");
+		assertEquals(1, album.getId());
+		assertEquals("Siamese Dream", album.getTitle());
 		
 	}
 
