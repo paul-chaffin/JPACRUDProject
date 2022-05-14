@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 
 import com.skilldistillery.vinyl.entities.Album;
 
-@Service
-@Transactional
 
+@Transactional
+@Service
 public class VinylDaoImpl implements VinylDAO {
 	@PersistenceContext
 	private EntityManager em;
@@ -27,6 +27,16 @@ public class VinylDaoImpl implements VinylDAO {
 		String jpql = "SELECT a FROM Album a";
 		List<Album> albums = em.createQuery(jpql, Album.class).getResultList();
 		return albums;
+	}
+	
+	
+	@Override
+	public Album createNewAlbum(Album album) {
+		em.persist(album);
+		em.flush();
+		album = em.find(Album.class, album.getId());
+		
+		return album;
 	}
 
 }

@@ -6,38 +6,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Vinyl Collection</title>
+<jsp:include page="bootstrapHead.jsp"/>
 </head>
 <body>
-
+<h1>VinylDB</h1>
+<hr>
 <form action="getAlbum.do" method="GET">
-			Album ID: <input type="text" name="aid" /> <input type="submit"
+			Find album by ID: <input type="text" name="aid" /> <input type="submit"
 				value="Show Album" />
 		</form>
 <br>
 <hr>
+<h2><a href="showAll.do">View All Records</a></h2>
 <br>
-<table>
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Title</th>
-					<th>Artist</th>
-					<th>Year</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="album" items="${albums}">
-					<tr>
-						<td>${album.id}</td>
-						<td align="center"><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
-						<td>${album.artist}</td>
-						<td>${album.year}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+<hr>
+<h2><a href="addAlbum.do">Add an album</a></h2>
+<br>
 
-<h1>All Records</h1>
-${DEBUG}
+
+
 </body>
+<jsp:include page="bootstrapFoot.jsp"/>
 </html>

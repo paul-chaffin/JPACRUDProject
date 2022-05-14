@@ -8,5 +8,6 @@ public interface VinylDAO {
 	
 	Album findById(int albumId);
 	List<Album> findAll();
+	Album createNewAlbum(Album album);
 
 }
