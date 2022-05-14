@@ -17,7 +17,7 @@
 		</form>
 <br>
 <hr>
-<h2><a href="showAll.do">View All Records</a></h2>
+<h2><a href="showAll.do">View All Albums</a></h2>
 <br>
 <hr>
 <h2><a href="addAlbum.do">Add an album</a></h2>

@@ -5,12 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>All Records</title>
+<title>All Albums</title>
 <jsp:include page="../bootstrapHead.jsp"/>
 </head>
 <body>
 <main class="container-fluid">
-<h2>All Records</h2>
+<h2>All Albums</h2>
+<hr>
 <br>
 <table>
 			<thead>
@@ -19,12 +20,11 @@
 					<th>Title</th>
 					<th>Artist</th>
 					<th>Year</th>
-					<th>Genre</th>
+					<!-- <th>Genre</th>
 					<th>Style</th>
 					<th>Label</th>
-					<th>Catalog #</th>
-					<th></th>
-					<th></th>
+					<th>Catalog #</th> -->
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -34,17 +34,16 @@
 						<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
 						<td>${album.artist}</td>
 						<td>${album.year}</td>
-						<td>${album.genre}</td>
+						<%-- <td>${album.genre}</td>
 						<td>${album.style}</td>
 						<td>${album.label}</td>
-						<td>${album.catNo}</td>
-						<td><a href="updateAlbum.do?aid=${album.id}">Update</a></td>
-						<td><a href="https://discogs.com/release/${album.releaseId}">Discogs</a></td>
-						<td><a href="runRemove.do?aid=${album.id}">Remove this album</a></td>
-					</tr>
+						<td>${album.catNo}</td> --%>
+											</tr>
 				</c:forEach>
 			</tbody>
 		</table>
+		<hr>
+		<h4><a href="index.do">Go home</a></h4>
 		</main>
 </body>
 <jsp:include page="../bootstrapFoot.jsp"/>
