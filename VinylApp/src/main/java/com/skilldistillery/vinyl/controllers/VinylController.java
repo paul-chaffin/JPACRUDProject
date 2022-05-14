@@ -43,6 +43,12 @@ public class VinylController {
 		return "album/addAlbum";
 	}
 	
+	@RequestMapping(path = "removeAlbum.do")
+	public String removeAlbum() {
+		
+		return "album/removeAlbum";
+	}
+	
 	@RequestMapping(path = "createNewAlbum.do")
 	public String createNewAlbum(Model model, String title, String artist, int year, String genre, String style, String label, String catNo, String releaseId, String format) {
 		Album album = new Album();
@@ -88,6 +94,21 @@ public class VinylController {
 		
 		model.addAttribute("album", updatedAlbum);
 		return "album/show";
+	}
+	
+	@RequestMapping(path = "runRemove.do")
+	public String runRemove(@RequestParam("aid") int aid, Model model) {
+		Album removingAlbum = vinylDao.findById(aid);
+		model.addAttribute("aid", aid);
+		model.addAttribute("title", removingAlbum.getTitle());
+		model.addAttribute("artist", removingAlbum.getArtist());
+		if (vinylDao.runRemove(aid)) {
+			return "album/removed";
+		} else {
+			return "album/removeFailed";
+		}
+		
+		
 	}
 
 }

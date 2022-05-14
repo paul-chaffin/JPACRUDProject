@@ -54,5 +54,16 @@ public class VinylDaoImpl implements VinylDAO {
 		
 		return managed;
 	}
+	
+	public boolean runRemove(int id) {
+		boolean result = false;
+		Album album = em.find(Album.class, id);
+		
+		if (album != null) {
+			em.remove(album);
+			result = !em.contains(album);
+		}
+		return result;
+	}
 
 }

@@ -40,6 +40,7 @@
 						<td>${album.catNo}</td>
 						<td><a href="updateAlbum.do?aid=${album.id}">Update</a></td>
 						<td><a href="https://discogs.com/release/${album.releaseId}">Discogs</a></td>
+						<td><a href="runRemove.do?aid=${album.id}">Remove this album</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
