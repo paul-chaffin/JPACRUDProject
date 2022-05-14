@@ -62,5 +62,32 @@ public class VinylController {
 		model.addAttribute("album", newAlbum);
 		return "album/show";
 	}
+	
+	@RequestMapping(path = "updateAlbum.do")
+	public String updateAlbum(@RequestParam("aid") int aid, Model model) {
+		Album album = vinylDao.findById(aid);
+		
+		
+		model.addAttribute("album", album);
+		return "album/updateAlbum";
+	}
+	
+	@RequestMapping(path = "runUpdate.do")
+	public String runUpdate(Model model, int id, String title, String artist, int year, String genre, String style, String label, String catNo, String releaseId, String format) {
+		Album album = new Album();
+		album.setTitle(title);
+		album.setArtist(artist);
+		album.setYear(year);
+		album.setGenre(genre);
+		album.setStyle(style);
+		album.setLabel(label);
+		album.setCatNo(catNo);
+		album.setReleaseId(releaseId);
+		album.setFormat(format);
+		Album updatedAlbum = vinylDao.runUpdate(id, album);
+		
+		model.addAttribute("album", updatedAlbum);
+		return "album/show";
+	}
 
 }

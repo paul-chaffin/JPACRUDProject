@@ -11,9 +11,11 @@
 <body>
 
 <div>
-  <h3>${album.title} | ID: ${album.id}</h3>
-  <h4>${album.artist} | ${album.year} | ${album.label}</h4>
-  <h4>${album.genre} / ${album.style} | <a href="https://discogs.com/release/${album.releaseId}">View on Discogs</a></h4>
+  <h3>${album.title}</h3>
+  <h4>${album.artist} | ${album.year}</h4>
+  <h4>${album.genre} / ${album.style} | ${album.label}</h4>
+  <h5><a href="https://discogs.com/release/${album.releaseId}">View on Discogs</a></h5>
+  ID: ${album.id} | <a href="updateAlbum.do?aid=${album.id}">Update this album's record</a>
 </div>
 </body>
 <jsp:include page="../bootstrapFoot.jsp"/>

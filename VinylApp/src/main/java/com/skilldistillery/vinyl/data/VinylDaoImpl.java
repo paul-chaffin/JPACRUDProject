@@ -38,5 +38,21 @@ public class VinylDaoImpl implements VinylDAO {
 		
 		return album;
 	}
+	
+	@Override
+	public Album runUpdate(int id, Album album) {
+		Album managed = em.find(Album.class, id);
+		managed.setTitle(album.getTitle());
+		managed.setArtist(album.getArtist());
+		managed.setYear(album.getYear());
+		managed.setGenre(album.getGenre());
+		managed.setStyle(album.getStyle());
+		managed.setLabel(album.getLabel());
+		managed.setCatNo(album.getCatNo());
+		managed.setReleaseId(album.getReleaseId());
+		managed.setFormat(album.getFormat());
+		
+		return managed;
+	}
 
 }

@@ -22,6 +22,9 @@
 <hr>
 <h2><a href="addAlbum.do">Add an album</a></h2>
 <br>
+<hr>
+<h2><a href="updateAlbum.do">Update an album</a></h2>
+<br>
 
 
 
