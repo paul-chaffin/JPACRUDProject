@@ -20,38 +20,43 @@ public class VinylController {
 
 	@RequestMapping(path = { "/", "index.do" })
 	public String index() {
-	
+
 		return "index";
 	}
-	
+
 	@RequestMapping(path = "getAlbum.do")
 	public String findById(@RequestParam("aid") int aid, Model model) {
 		Album album = vinylDao.findById(aid);
-		model.addAttribute("album", album);
-		return "album/show";
+		if (album != null) {
+			model.addAttribute("album", album);
+			return "album/show";
+		} else {
+			return "album/notFound";
+		}
 	}
-	
+
 	@RequestMapping(path = "showAll.do")
 	public String findAll(Model model) {
 		List<Album> albums = vinylDao.findAll();
 		model.addAttribute("albums", albums);
 		return "album/showAll";
 	}
-	
+
 	@RequestMapping(path = "addAlbum.do")
 	public String addAlbum() {
-	
+
 		return "album/addAlbum";
 	}
-	
+
 	@RequestMapping(path = "removeAlbum.do")
 	public String removeAlbum() {
-		
+
 		return "album/removeAlbum";
 	}
-	
+
 	@RequestMapping(path = "createNewAlbum.do")
-	public String createNewAlbum(Model model, String title, String artist, int year, String genre, String style, String label, String catNo, String releaseId, String format) {
+	public String createNewAlbum(Model model, String title, String artist, int year, String genre, String style,
+			String label, String catNo, String releaseId, String format) {
 		Album album = new Album();
 		album.setTitle(title);
 		album.setArtist(artist);
@@ -63,24 +68,22 @@ public class VinylController {
 		album.setReleaseId(releaseId);
 		album.setFormat(format);
 		Album newAlbum = vinylDao.createNewAlbum(album);
-		
-		
-		
+
 		model.addAttribute("album", newAlbum);
 		return "album/show";
 	}
-	
+
 	@RequestMapping(path = "updateAlbum.do")
 	public String updateAlbum(@RequestParam("aid") int aid, Model model) {
 		Album album = vinylDao.findById(aid);
-		
-		
+
 		model.addAttribute("album", album);
 		return "album/updateAlbum";
 	}
-	
+
 	@RequestMapping(path = "runUpdate.do")
-	public String runUpdate(Model model, int id, String title, String artist, int year, String genre, String style, String label, String catNo, String releaseId, String format) {
+	public String runUpdate(Model model, int id, String title, String artist, int year, String genre, String style,
+			String label, String catNo, String releaseId, String format) {
 		Album album = new Album();
 		album.setTitle(title);
 		album.setArtist(artist);
@@ -92,11 +95,11 @@ public class VinylController {
 		album.setReleaseId(releaseId);
 		album.setFormat(format);
 		Album updatedAlbum = vinylDao.runUpdate(id, album);
-		
+
 		model.addAttribute("album", updatedAlbum);
 		return "album/show";
 	}
-	
+
 	@RequestMapping(path = "runRemove.do")
 	public String runRemove(@RequestParam("aid") int aid, Model model) {
 		Album removingAlbum = vinylDao.findById(aid);
@@ -108,8 +111,7 @@ public class VinylController {
 		} else {
 			return "album/removeFailed";
 		}
-		
-		
+
 	}
 
 }

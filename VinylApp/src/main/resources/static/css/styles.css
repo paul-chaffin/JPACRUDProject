@@ -1,0 +1,65 @@
+body {
+  background-color: teal;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 8px 8px 8px 8px;
+}
+
+div {
+  font-size: 12px;
+  font-family: Geneva, sans-serif;
+  text-align: center !important;
+  color: white;
+  opacity: .8;
+  border: 2px solid gray;
+  padding: 20px;
+}
+
+a:link{
+  color: yellow;
+  text-decoration: none;
+}
+
+a:visited{
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover{
+  color: orange;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: Geneva, sans-serif;
+  color: white;
+  text-align: center;
+  border: 2px solid gray;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center !important;
+}
+
+h3 {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center !important;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+label,
+input {
+  /* In order to define widths */
+  display: inline-block;
+}

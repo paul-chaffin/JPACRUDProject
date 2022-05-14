@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Album Result</title>
 <jsp:include page="../bootstrapHead.jsp"/>
+<link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 
@@ -22,8 +23,7 @@
 	<br> 
  <a href="updateAlbum.do?aid=${album.id}">Update this album</a> | <a href="runRemove.do?aid=${album.id}">Remove this album</a> | <a href="https://discogs.com/release/${album.releaseId}">View on Discogs</a>
 </div>
-<hr>
-<h4><a href="index.do">Go home</a></h4>
 </body>
+<div><h4><a href="index.do">Main</a></h4></div>
 <jsp:include page="../bootstrapFoot.jsp"/>
 </html>
