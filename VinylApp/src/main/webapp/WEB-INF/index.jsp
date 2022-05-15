@@ -19,8 +19,13 @@
 				value=" > " />
 		</form>
 		<br>
-		<form action="searchTitles.do" method="GET">
+		<form action="searchTitle.do" method="GET">
 			by title: <input type="text" name="keyword" /> <input type="submit"
+				value=" > " />
+		</form>
+		<br>
+		<form action="searchArtist.do" method="GET">
+			by artist: <input type="text" name="keyword" /> <input type="submit"
 				value=" > " />
 		</form>
 	</div>

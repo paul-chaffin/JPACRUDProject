@@ -66,10 +66,18 @@ public class VinylDaoImpl implements VinylDAO {
 	}
 
 	@Override
-	public List<Album> searchTitles(String keyword) {
+	public List<Album> searchTitle(String keyword) {
 		String jpql = "SELECT a FROM Album a WHERE a.title LIKE :keyword";
 		List<Album> albums = em.createQuery(jpql, Album.class).setParameter("keyword", "%"+keyword+"%").getResultList();
 
+		return albums;
+	}
+	
+	@Override
+	public List<Album> searchArtist(String keyword) {
+		String jpql = "SELECT a FROM Album a WHERE a.artist LIKE :keyword";
+		List<Album> albums = em.createQuery(jpql, Album.class).setParameter("keyword", "%"+keyword+"%").getResultList();
+		
 		return albums;
 	}
 

@@ -35,10 +35,22 @@ public class VinylController {
 		}
 	}
 
-	@RequestMapping(path = "searchTitles.do")
-	public String searchTitles(@RequestParam("keyword") String keyword, Model model) {
-		List<Album> albums = vinylDao.searchTitles(keyword);
+	@RequestMapping(path = "searchTitle.do")
+	public String searchTitle(@RequestParam("keyword") String keyword, Model model) {
+		List<Album> albums = vinylDao.searchTitle(keyword);
 
+		if (albums != null) {
+			model.addAttribute("albums", albums);
+			return "album/searchResults";
+		} else {
+			return "album/notFound";
+		}
+	}
+	
+	@RequestMapping(path = "searchArtist.do")
+	public String searchArtist(@RequestParam("keyword") String keyword, Model model) {
+		List<Album> albums = vinylDao.searchArtist(keyword);
+		
 		if (albums != null) {
 			model.addAttribute("albums", albums);
 			return "album/searchResults";
