@@ -20,7 +20,7 @@
 		</form>
 		<br>
 		<form action="searchTitles.do" method="GET">
-			by title: <input type="text" name="aid" /> <input type="submit"
+			by title: <input type="text" name="keyword" /> <input type="submit"
 				value=" > " />
 		</form>
 	</div>

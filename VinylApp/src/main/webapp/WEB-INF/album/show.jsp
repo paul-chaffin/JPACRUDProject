@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div>
+<div class="singleAlbum">
   <h3>${album.artist} - ${album.title} (${album.year})</h3>
   <ul>
   <li><strong>Label:</strong>	 ${album.label}</li>

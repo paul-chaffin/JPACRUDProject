@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.skilldistillery.vinyl.entities.Album;
 
-
 @Transactional
 @Service
 public class VinylDaoImpl implements VinylDAO {
@@ -28,17 +27,16 @@ public class VinylDaoImpl implements VinylDAO {
 		List<Album> albums = em.createQuery(jpql, Album.class).getResultList();
 		return albums;
 	}
-	
-	
+
 	@Override
 	public Album createNewAlbum(Album album) {
 		em.persist(album);
 		em.flush();
 		album = em.find(Album.class, album.getId());
-		
+
 		return album;
 	}
-	
+
 	@Override
 	public Album runUpdate(int id, Album album) {
 		Album managed = em.find(Album.class, id);
@@ -51,19 +49,28 @@ public class VinylDaoImpl implements VinylDAO {
 		managed.setCatNo(album.getCatNo());
 		managed.setReleaseId(album.getReleaseId());
 		managed.setFormat(album.getFormat());
-		
+
 		return managed;
 	}
-	
+
+	@Override
 	public boolean runRemove(int id) {
 		boolean result = false;
 		Album album = em.find(Album.class, id);
-		
+
 		if (album != null) {
 			em.remove(album);
 			result = !em.contains(album);
 		}
 		return result;
+	}
+
+	@Override
+	public List<Album> searchTitles(String keyword) {
+		String jpql = "SELECT a FROM Album a WHERE a.title LIKE :keyword";
+		List<Album> albums = em.createQuery(jpql, Album.class).setParameter("keyword", "%"+keyword+"%").getResultList();
+
+		return albums;
 	}
 
 }

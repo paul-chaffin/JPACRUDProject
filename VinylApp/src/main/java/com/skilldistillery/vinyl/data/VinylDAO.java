@@ -11,5 +11,6 @@ public interface VinylDAO {
 	Album createNewAlbum(Album album);
 	Album runUpdate(int id, Album updatedAlbum);
 	boolean runRemove(int id);
+	List<Album> searchTitles(String keyword);
 
 }
