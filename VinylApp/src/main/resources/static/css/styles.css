@@ -6,10 +6,17 @@ body {
 }
 
 input[type=text] {
-  width: 50%;
+  width: 10%;
   padding: 6px 10px;
   margin: 4px 0;
   box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+  color: white;
+}
+
+input[type=text]:focus {
+  background-color: coral;
+  width: 50%;
 }
 
 ul{
