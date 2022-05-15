@@ -11,45 +11,32 @@
 </head>
 <body>
 	<main class="container-fluid">
-		<h1>all albums</h1>
+		<h1>all genres</h1>
 		<hr>
 		<br>
 		<div>
 			<table>
 				<thead>
 					<tr>
-						<th>id</th>
-						<th>title</th>
-						<th>artist</th>
-						<th>year</th>
-						<th>format</th>
-						<!-- <th>Genre</th>
-					<th>Style</th>
-					<th>Label</th>
-					<th>Catalog #</th> -->
+
+						<th>genre</th>
+
 
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="album" items="${albums}">
+					<c:forEach var="genre" items="${catalog}">
 						<tr>
-							<td>${album.id}</td>
-							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
-							<td>${album.artist}</td>
-							<td>${album.year}</td>
-							<td>${album.format}</td>
-						<%--<td>${album.style}</td>
-						<td>${album.label}</td>
-						<td>${album.catNo}</td> --%>
-						</tr>
+
+							<td><a href="getGenre.do?genre=${genre}">${genre}</a></td>
 					</c:forEach>
 				</tbody>
 			</table>
 		</div>
 		<hr>
-		<h4>
+		<div><h4>
 			<a href="index.do">main</a>
-		</h4>
+		</h4></div>
 	</main>
 </body>
 <jsp:include page="../bootstrapFoot.jsp" />

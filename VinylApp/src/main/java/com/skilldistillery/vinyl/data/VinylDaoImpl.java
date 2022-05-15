@@ -80,5 +80,31 @@ public class VinylDaoImpl implements VinylDAO {
 		
 		return albums;
 	}
-
+	
+	@Override
+	public List<String> retrieveAllArtists(){
+		String jpql = "SELECT DISTINCT a.artist FROM Album a ORDER BY a.artist ASC";
+		List<String> artists = em.createQuery(jpql, String.class).getResultList();
+		return artists;
+	}
+	@Override
+	public List<Album> retrieveArtistCatalog(String artist){
+		String jpql = "SELECT a FROM Album a WHERE a.artist = :artist ORDER BY a.title ASC";
+		List<Album> catalog = em.createQuery(jpql, Album.class).setParameter("artist", artist).getResultList();
+		return catalog;
+	}
+	
+	@Override
+	public List<String> retrieveAllGenres(){
+		String jpql = "SELECT DISTINCT a.genre FROM Album a ORDER BY a.genre ASC";
+		List<String> genres = em.createQuery(jpql, String.class).getResultList();
+		return genres;
+	}
+	
+	@Override
+	public List<Album> retrieveGenreCatalog(String genre){
+		String jpql = "SELECT a FROM Album a WHERE a.genre = :genre ORDER BY a.title ASC";
+		List<Album> catalog = em.createQuery(jpql, Album.class).setParameter("genre", genre).getResultList();
+		return catalog;
+	}
 }

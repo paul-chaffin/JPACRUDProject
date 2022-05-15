@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>All Albums</title>
+<title>${genre}</title>
 <jsp:include page="../bootstrapHead.jsp" />
 <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 	<main class="container-fluid">
-		<h1>all albums</h1>
+		<h1>${genre}</h1>
 		<hr>
 		<br>
 		<div>
@@ -19,11 +19,12 @@
 				<thead>
 					<tr>
 						<th>id</th>
+						<th>style</th>
 						<th>title</th>
 						<th>artist</th>
-						<th>year</th>
-						<th>format</th>
-						<!-- <th>Genre</th>
+						<!-- <th>year</th> -->
+						<!-- <th>format</th>
+						<th>Genre</th>
 					<th>Style</th>
 					<th>Label</th>
 					<th>Catalog #</th> -->
@@ -31,14 +32,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="album" items="${albums}">
+					<c:forEach var="album" items="${catalog}">
 						<tr>
 							<td>${album.id}</td>
+							<td>${album.style}</td>
 							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
-							<td>${album.artist}</td>
-							<td>${album.year}</td>
-							<td>${album.format}</td>
-						<%--<td>${album.style}</td>
+							<td><a href="getArtist.do?artist=${album.artist}">${album.artist}</a></td>
+							<%-- <td>${album.year}</td> --%>
+							<%-- <td>${album.format}</td>
+						<td>${album.style}</td>
 						<td>${album.label}</td>
 						<td>${album.catNo}</td> --%>
 						</tr>
@@ -47,9 +49,9 @@
 			</table>
 		</div>
 		<hr>
-		<h4>
+		<div><h4>
 			<a href="index.do">main</a>
-		</h4>
+		</h4></div>
 	</main>
 </body>
 <jsp:include page="../bootstrapFoot.jsp" />

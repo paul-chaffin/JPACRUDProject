@@ -1,7 +1,7 @@
 body {
   background-color: teal;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 15%;
+  margin-right: 15%;
   padding: 8px 8px 8px 8px;
 }
 
@@ -19,7 +19,7 @@ div {
   font-family: Geneva, sans-serif;
   text-align: center;
   color: white;
-  opacity: .8;
+  /* opacity: .8; */
   border: 2px solid gray;
   padding: 20px;
 }
@@ -40,7 +40,7 @@ a:hover{
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 50px;
   font-family: Geneva, sans-serif;
   color: white;
   text-align: center;
@@ -49,14 +49,14 @@ h1 {
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 30px;
   font-family: sans-serif;
   color: white;
   text-align: center;
 }
 
 h3 {
-  font-size: 14px;
+  font-size: 20px;
   font-family: sans-serif;
   color: white;
   text-align: center;
@@ -81,6 +81,7 @@ table {
 
 td{
   text-align: center;
+  font-size: 16px;
   border: 2px solid cyan;
   border-collapse: collapse;
 }
@@ -98,7 +99,7 @@ tr:hover{
 
 th{
   text-align:center;
-  font-size: 16px;
+  font-size: 12px;
   border: 2px solid cyan;
   border-collapse: collapse;
 }

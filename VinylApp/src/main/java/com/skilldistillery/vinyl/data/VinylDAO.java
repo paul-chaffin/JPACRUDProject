@@ -13,5 +13,9 @@ public interface VinylDAO {
 	boolean runRemove(int id);
 	List<Album> searchTitle(String keyword);
 	List<Album> searchArtist(String keyword);
+	List<String> retrieveAllArtists();
+	List<Album> retrieveArtistCatalog(String artist);
+	List<String> retrieveAllGenres();
+	List<Album> retrieveGenreCatalog(String genre);
 
 }

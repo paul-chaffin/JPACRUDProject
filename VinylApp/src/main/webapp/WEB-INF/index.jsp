@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Vinyl Collection</title>
+<title>vinylDB</title>
 <jsp:include page="bootstrapHead.jsp" />
 <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-	<h1>VinylDB</h1>
+	<h1>vinylDB</h1>
 	<hr>
 	<div>
 		<h2>Search</h2>
@@ -32,13 +32,22 @@
 
 	<hr>
 	<div>
-		<h2>
-			<a href="showAll.do">View All Albums</a>
-		</h2>
-		<br>
-		<h2>
-			<a href="addAlbum.do">Add Album</a>
-		</h2>
+		<h2>Browse</h2>
+	</div>
+	<div>
+		<h4>
+			<a href="browseAllArtists.do">by artist</a>
+		</h4>
+		<h4>
+			<a href="browseAllGenres.do">by genre</a>
+		</h4>
+		
+		<h4>
+			<a href="showAll.do">all albums</a>
+		</h4>
+		<h4>
+			<a href="addAlbum.do">add album</a>
+		</h4>
 	</div>
 
 

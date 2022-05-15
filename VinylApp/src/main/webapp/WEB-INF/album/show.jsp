@@ -12,7 +12,7 @@
 <body>
 
 <div class="singleAlbum">
-  <h3>${album.artist} - ${album.title} (${album.year})</h3>
+  <h2>${album.artist} - ${album.title} (${album.year})</h2>
   <ul>
   <li><strong>Label:</strong>	 ${album.label}</li>
   <li><strong>Format:</strong>	 ${album.format}</li>
@@ -20,10 +20,10 @@
   <li><strong>Style:</strong>	 ${album.style}</li>
   <li><strong>Database ID:</strong>	 	 ${album.id}</li>
   </ul>
-	<br> 
- <a href="updateAlbum.do?aid=${album.id}">Update this album</a> | <a href="runRemove.do?aid=${album.id}">Remove this album</a> | <a href="https://discogs.com/release/${album.releaseId}">View on Discogs</a>
+	</div>
+ <div><h3><a href="updateAlbum.do?aid=${album.id}">update</a> | <a href="runRemove.do?aid=${album.id}" >remove</a> | <a href="https://discogs.com/release/${album.releaseId}" target="_blank">view on discogs</a></h3>
 </div>
 </body>
-<div><h4><a href="index.do">Main</a></h4></div>
+<div><h4><a href="index.do">main</a></h4></div>
 <jsp:include page="../bootstrapFoot.jsp"/>
 </html>

@@ -36,7 +36,7 @@ public class VinylController {
 	}
 
 	@RequestMapping(path = "searchTitle.do")
-	public String searchTitle(@RequestParam("keyword") String keyword, Model model) {
+	public String searchTitle(String keyword, Model model) {
 		List<Album> albums = vinylDao.searchTitle(keyword);
 
 		if (albums != null) {
@@ -48,7 +48,7 @@ public class VinylController {
 	}
 	
 	@RequestMapping(path = "searchArtist.do")
-	public String searchArtist(@RequestParam("keyword") String keyword, Model model) {
+	public String searchArtist(String keyword, Model model) {
 		List<Album> albums = vinylDao.searchArtist(keyword);
 		
 		if (albums != null) {
@@ -59,6 +59,38 @@ public class VinylController {
 		}
 	}
 
+	@RequestMapping(path = "browseAllArtists.do")
+	public String browseAllArtists(Model model) {
+		List<String> artists = vinylDao.retrieveAllArtists();
+		model.addAttribute("artists", artists);
+		return "browse/allArtists";
+	}
+	
+	@RequestMapping(path = "getArtist.do")
+	public String browseSingleArtist(String artist, Model model) {
+		List<Album> catalog = vinylDao.retrieveArtistCatalog(artist);
+		model.addAttribute("catalog", catalog);
+		model.addAttribute("artist", artist);
+		return "browse/artistCatalog";
+	}
+	
+	@RequestMapping(path = "browseAllGenres.do")
+	public String browseAllGenres(Model model) {
+		List<String> genres = vinylDao.retrieveAllGenres();
+		model.addAttribute("catalog", genres);
+		return "browse/allGenres";
+	}
+	
+	@RequestMapping(path = "getGenre.do")
+	public String browseSingleGenre(String genre, Model model) {
+		List<Album> catalog = vinylDao.retrieveGenreCatalog(genre);
+		model.addAttribute("catalog", catalog);
+		model.addAttribute("genre", genre.toLowerCase());
+		return "browse/genreCatalog";
+	}
+	
+	
+	
 	@RequestMapping(path = "showAll.do")
 	public String findAll(Model model) {
 		List<Album> albums = vinylDao.findAll();
