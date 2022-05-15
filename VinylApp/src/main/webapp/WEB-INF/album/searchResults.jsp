@@ -11,18 +11,18 @@
 </head>
 <body>
 	<main class="container-fluid">
-		<h1>Search Results</h1>
-		<h3>Click on any album's title to view more information</h3>
+		<h1>search results: ${keyword}</h1>
 		<hr>
 		<br>
 		<div>
 			<table>
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>Title</th>
-						<th>Artist</th>
-						<th>Year</th>
+						<th>id</th>
+						<th>title</th>
+						<th>artist</th>
+						<th>year</th>
+						<th>format</th>
 						<!-- <th>Genre</th>
 					<th>Style</th>
 					<th>Label</th>
@@ -35,8 +35,9 @@
 						<tr>
 							<td>${album.id}</td>
 							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
-							<td>${album.artist}</td>
+							<td><a href="getArtist.do?artist=${artist}">${album.artist}</a></td>
 							<td>${album.year}</td>
+							<td>${album.format}</td>
 							<%-- <td>${album.genre}</td>
 						<td>${album.style}</td>
 						<td>${album.label}</td>

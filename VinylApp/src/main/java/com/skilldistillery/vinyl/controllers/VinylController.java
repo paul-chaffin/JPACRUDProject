@@ -41,6 +41,7 @@ public class VinylController {
 
 		if (albums != null) {
 			model.addAttribute("albums", albums);
+			model.addAttribute("keyword", keyword.toLowerCase());
 			return "album/searchResults";
 		} else {
 			return "album/notFound";
@@ -53,6 +54,7 @@ public class VinylController {
 		
 		if (albums != null) {
 			model.addAttribute("albums", albums);
+			model.addAttribute("keyword", keyword.toLowerCase());
 			return "album/searchResults";
 		} else {
 			return "album/notFound";
