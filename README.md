@@ -1,4 +1,4 @@
-## JPACRUD Project
+## JPACRUD Project / vinylDB
 
 ### Week 9 Homework for Skill Distillery
 
