@@ -13,38 +13,40 @@
 	<h1>vinylDB</h1>
 	<hr>
 	<div>
-		<h2>Search</h2>
+		<h2>search</h2>
+	</div>
+	<div>
 		<form action="getAlbum.do" method="GET">
 			by ID: <input type="text" name="aid" /> <input type="submit"
-				value=" > " />
+				value=" # " />
 		</form>
 		<br>
 		<form action="searchTitle.do" method="GET">
 			by title: <input type="text" name="keyword" /> <input type="submit"
-				value=" > " />
+				value=" 💽 " />
 		</form>
 		<br>
 		<form action="searchArtist.do" method="GET">
 			by artist: <input type="text" name="keyword" /> <input type="submit"
-				value=" > " />
+				value=" 🎤 " />
 		</form>
 	</div>
 
-	<hr>
+
 	<div>
-		<h2>Browse</h2>
+		<h2>browse</h2>
 	</div>
 	<div>
+		<h4>
+			<a href="showAll.do">all albums</a>
+		</h4>
 		<h4>
 			<a href="browseAllArtists.do">by artist</a>
 		</h4>
 		<h4>
 			<a href="browseAllGenres.do">by genre</a>
 		</h4>
-		
-		<h4>
-			<a href="showAll.do">all albums</a>
-		</h4>
+
 		<h4>
 			<a href="addAlbum.do">add album</a>
 		</h4>

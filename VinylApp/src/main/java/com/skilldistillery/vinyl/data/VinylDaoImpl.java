@@ -23,7 +23,7 @@ public class VinylDaoImpl implements VinylDAO {
 
 	@Override
 	public List<Album> findAll() {
-		String jpql = "SELECT a FROM Album a";
+		String jpql = "SELECT a FROM Album a ORDER BY a.title ASC";
 		List<Album> albums = em.createQuery(jpql, Album.class).getResultList();
 		return albums;
 	}

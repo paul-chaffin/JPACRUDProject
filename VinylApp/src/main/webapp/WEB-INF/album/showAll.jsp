@@ -35,7 +35,7 @@
 						<tr>
 							<td>${album.id}</td>
 							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
-							<td>${album.artist}</td>
+							<td><a href="getArtist.do?artist=${album.artist}">${album.artist}</a></td>
 							<td>${album.year}</td>
 							<td>${album.format}</td>
 						<%--<td>${album.style}</td>

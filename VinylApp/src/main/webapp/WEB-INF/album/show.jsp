@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Album Result</title>
 <jsp:include page="../bootstrapHead.jsp"/>
-<link href="css/styles.css" rel="stylesheet">
+<link href="css/singleAlbum.css" rel="stylesheet">
 </head>
 <body>
 

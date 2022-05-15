@@ -21,8 +21,8 @@
 						<th>id</th>
 						<th>title</th>
 						<th>year</th>
-						<!-- <th>format</th>
-						<th>Genre</th>
+						<th>format</th>
+						<!-- <th>Genre</th>
 					<th>Style</th>
 					<th>Label</th>
 					<th>Catalog #</th> -->
@@ -35,10 +35,10 @@
 							<td>${album.id}</td>
 							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
 							<td>${album.year}</td>
-							<%-- <td>${album.format}</td>
-						<td>${album.style}</td>
+							<td>${album.format}</td>
+					<!-- <td>${album.style}</td>
 						<td>${album.label}</td>
-						<td>${album.catNo}</td> --%>
+						<td>${album.catNo}</td> -->
 						</tr>
 					</c:forEach>
 				</tbody>
