@@ -50,10 +50,10 @@ public class VinylController {
 
 	@RequestMapping(path = "searchArtist.do")
 	public String searchArtist(String keyword, Model model) {
-		List<Album> albums = vinylDao.searchArtist(keyword);
+		List<String> artists = vinylDao.searchArtist(keyword);
 
-		if (albums != null) {
-			model.addAttribute("albums", albums);
+		if (artists != null) {
+			model.addAttribute("artists", artists);
 			model.addAttribute("keyword", keyword.toLowerCase());
 			return "album/searchResults";
 		} else {

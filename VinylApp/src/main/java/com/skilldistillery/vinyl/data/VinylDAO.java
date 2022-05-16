@@ -12,7 +12,7 @@ public interface VinylDAO {
 	Album runUpdate(int id, Album updatedAlbum);
 	boolean runRemove(int id);
 	List<Album> searchTitle(String keyword);
-	List<Album> searchArtist(String keyword);
+	List<String> searchArtist(String keyword);
 	List<String> retrieveAllArtists();
 	List<String> retrieveAllGenres();
 	List<String> retrieveAllStyles();

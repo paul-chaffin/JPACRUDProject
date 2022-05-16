@@ -29,6 +29,24 @@
 					</tr>
 				</thead>
 				<tbody>
+				<c:choose>
+					<c:when test="${not empty artists }">
+					<c:forEach var="artist" items="${artists}">
+						<tr>
+						
+							<td><a href="getArtist.do?artist=${artist}">${artist}</a></td>
+							<%--	<td>${album.id}</td>
+							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td> 
+							<td>${album.year}</td>
+							<td>${album.format}</td>
+							<td>${album.genre}</td>
+						<td>${album.style}</td>
+						<td>${album.label}</td>
+						<td>${album.catNo}</td> --%>
+						</tr>
+					</c:forEach>
+					</c:when>
+					<c:when test="${not empty albums }">
 					<c:forEach var="album" items="${albums}">
 						<tr>
 						
@@ -43,6 +61,8 @@
 						<td>${album.catNo}</td> --%>
 						</tr>
 					</c:forEach>
+					</c:when>
+					</c:choose>
 				</tbody>
 			</table>
 		</div>
