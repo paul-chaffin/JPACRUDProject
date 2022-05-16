@@ -67,7 +67,7 @@ public class VinylDaoImpl implements VinylDAO {
 
 	@Override
 	public List<Album> searchTitle(String keyword) {
-		String jpql = "SELECT a FROM Album a WHERE a.title LIKE :keyword ORDER BY a.title ASC";
+		String jpql = "SELECT DISTINCT a FROM Album a WHERE a.title LIKE :keyword ORDER BY a.title ASC";
 		List<Album> albums = em.createQuery(jpql, Album.class).setParameter("keyword", "%"+keyword+"%").getResultList();
 
 		return albums;
@@ -75,7 +75,7 @@ public class VinylDaoImpl implements VinylDAO {
 	
 	@Override
 	public List<Album> searchArtist(String keyword) {
-		String jpql = "SELECT a FROM Album a WHERE a.artist LIKE :keyword ORDER BY a.artist ASC";
+		String jpql = "SELECT DISTINCT a FROM Album a WHERE a.artist LIKE :keyword ORDER BY a.artist ASC";
 		List<Album> albums = em.createQuery(jpql, Album.class).setParameter("keyword", "%"+keyword+"%").getResultList();
 		
 		return albums;
