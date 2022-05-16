@@ -13,11 +13,12 @@
 
 	<div>
 		<h2>
-			${album.title} <br>
-			<a href="getArtist.do?artist=${album.artist}">${album.artist}</a>
+			${album.title} <br> <a
+				href="getArtist.do?artist=${album.artist}">${album.artist}</a>
 
 		</h2>
-		${album.year}<br> <a href="/img/${album.catNo}.jpeg"><img
+		<h3>${album.year}</h3>
+		<br> <a href="/img/${album.catNo}.jpeg"><img
 			src="/img/${album.catNo}.jpeg"></a>
 		<div class="tiny">
 			<p>
