@@ -18,12 +18,10 @@
 			<table>
 				<thead>
 					<tr>
-						<th>id</th>
-						<th>title</th>
 						<th>artist</th>
-						<th>year</th>
+						<!-- <th>year</th>
 						<th>format</th>
-						<!-- <th>Genre</th>
+						<th>Genre</th>
 					<th>Style</th>
 					<th>Label</th>
 					<th>Catalog #</th> -->
@@ -33,12 +31,13 @@
 				<tbody>
 					<c:forEach var="album" items="${albums}">
 						<tr>
-							<td>${album.id}</td>
-							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
-							<td><a href="getArtist.do?artist=${artist}">${album.artist}</a></td>
+						
+							<td><a href="getArtist.do?artist=${album.artist}">${album.artist}</a></td>
+							<%--	<td>${album.id}</td>
+							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td> 
 							<td>${album.year}</td>
 							<td>${album.format}</td>
-							<%-- <td>${album.genre}</td>
+							<td>${album.genre}</td>
 						<td>${album.style}</td>
 						<td>${album.label}</td>
 						<td>${album.catNo}</td> --%>
