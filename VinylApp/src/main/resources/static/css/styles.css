@@ -16,7 +16,19 @@ input[type=text] {
 
 input[type=text]:focus {
   background-color: coral;
-  width: 50%;
+  width: 25%;
+}
+
+input[type=text].titlebtn:focus{
+  width: 25% !important;
+}
+
+input[type=text].artistbtn:focus{
+  width: 25% !important;
+}
+
+input[type=text].idbtn:focus{
+  width: 10% !important;
 }
 
 ul{

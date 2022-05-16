@@ -18,8 +18,8 @@
 
 		</h2>
 		<h3>${album.year}</h3>
-		<br> <a href="/img/${album.catNo}.jpeg"><img
-			src="/img/${album.catNo}.jpeg"></a>
+		<br> <a href="img/${album.catNo}.jpeg"><img
+			src="img/${album.catNo}.jpeg"></a>
 		<div class="tiny">
 			<p>
 			<table>
