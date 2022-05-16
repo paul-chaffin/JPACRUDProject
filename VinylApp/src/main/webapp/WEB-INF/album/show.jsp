@@ -13,38 +13,39 @@
 
 	<div>
 		<h2>
-			<a href="getArtist.do?artist=${album.artist}">${album.artist}</a> -
-			${album.title} (${album.year})
+			${album.title} <br>
+			<a href="getArtist.do?artist=${album.artist}">${album.artist}</a>
+
 		</h2>
-		<a href="/img/${album.catNo}.jpeg"><img
+		${album.year}<br> <a href="/img/${album.catNo}.jpeg"><img
 			src="/img/${album.catNo}.jpeg"></a>
 		<div class="tiny">
 			<p>
 			<table>
-			<tr>
-				<td><strong>genre:</strong></td>
-				<td><strong>${album.genre}</strong></td>
-			</tr>
-			<tr>
-				<td><strong>style:</strong></td>
-				<td><strong>${album.style}</strong></td>
-			</tr>
-			<tr>
-				<td><strong>format:</strong></td>
-				<td><strong>${album.format}</strong></td>
-			</tr>
-			<tr>
-				<td><strong>label:</strong></td>
-				<td><strong>${album.label}</strong></td>
-			</tr>
-			<tr>
-				<td><strong>catalog #:</strong></td>
-				<td><strong>${album.catNo}</strong></td>
-			</tr>
-			<tr>
-				<td><strong>db id:</strong></td>
-				<td><strong>${album.id}</strong></td>
-			</tr>
+				<tr>
+					<td><strong>genre:</strong></td>
+					<td><a href="getGenre.do?genre=${album.genre}">${album.genre}</a></td>
+				</tr>
+				<tr>
+					<td><strong>style:</strong></td>
+					<td><a href="getStyle.do?style=${album.style}">${album.style}</a></td>
+				</tr>
+				<tr>
+					<td><strong>format:</strong></td>
+					<td><strong>${album.format}</strong></td>
+				</tr>
+				<tr>
+					<td><strong>label:</strong></td>
+					<td><strong>${album.label}</strong></td>
+				</tr>
+				<tr>
+					<td><strong>catalog #:</strong></td>
+					<td><strong>${album.catNo}</strong></td>
+				</tr>
+				<tr>
+					<td><strong>db id:</strong></td>
+					<td><strong>${album.id}</strong></td>
+				</tr>
 			</table>
 			</p>
 		</div>

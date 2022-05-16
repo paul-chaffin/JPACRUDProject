@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${genre}</title>
+<title>${style}</title>
 <jsp:include page="../bootstrapHead.jsp" />
 <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 	<main class="container-fluid">
-		<h1>${genre}</h1>
+		<h1>${style}</h1>
 		<hr>
 		<br>
 		<div>
@@ -19,7 +19,6 @@
 				<thead>
 					<tr>
 						<th>id</th>
-						<th>style</th>
 						<th>title</th>
 						<th>artist</th>
 						<!-- <th>year</th> -->
@@ -35,7 +34,6 @@
 					<c:forEach var="album" items="${catalog}">
 						<tr>
 							<td>${album.id}</td>
-							<td><a href="getStyle.do?style=${album.style}">${album.style}</a></td>
 							<td><a href="getAlbum.do?aid=${album.id}">${album.title}</a></td>
 							<td><a href="getArtist.do?artist=${album.artist}">${album.artist}</a></td>
 							<%-- <td>${album.year}</td> --%>

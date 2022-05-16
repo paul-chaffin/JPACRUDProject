@@ -86,6 +86,13 @@ public class VinylController {
 		model.addAttribute("catalog", genres);
 		return "browse/allGenres";
 	}
+	
+	@RequestMapping(path = "browseAllStyles.do")
+	public String browseAllStyles(Model model) {
+		List<String> styles = vinylDao.retrieveAllStyles();
+		model.addAttribute("catalog", styles);
+		return "browse/allStyles";
+	}
 
 	@RequestMapping(path = "getGenre.do")
 	public String browseSingleGenre(String genre, Model model) {
@@ -93,6 +100,14 @@ public class VinylController {
 		model.addAttribute("catalog", catalog);
 		model.addAttribute("genre", genre.toLowerCase());
 		return "browse/genreCatalog";
+	}
+	
+	@RequestMapping(path = "getStyle.do")
+	public String browseSingleStyle(String style, Model model) {
+		List<Album> catalog = vinylDao.retrieveStyleCatalog(style);
+		model.addAttribute("catalog", catalog);
+		model.addAttribute("style", style.toLowerCase());
+		return "browse/styleCatalog";
 	}
 
 	@RequestMapping(path = "showAll.do")

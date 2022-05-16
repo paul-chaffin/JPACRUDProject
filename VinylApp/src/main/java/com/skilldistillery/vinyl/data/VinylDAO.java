@@ -14,8 +14,10 @@ public interface VinylDAO {
 	List<Album> searchTitle(String keyword);
 	List<Album> searchArtist(String keyword);
 	List<String> retrieveAllArtists();
-	List<Album> retrieveArtistCatalog(String artist);
 	List<String> retrieveAllGenres();
+	List<String> retrieveAllStyles();
+	List<Album> retrieveArtistCatalog(String artist);
 	List<Album> retrieveGenreCatalog(String genre);
+	List<Album> retrieveStyleCatalog(String style);
 
 }

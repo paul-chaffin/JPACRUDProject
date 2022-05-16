@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>all genres</title>
+<title>all styles</title>
 <jsp:include page="../bootstrapHead.jsp" />
 <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 	<main class="container-fluid">
-		<h1>all genres</h1>
+		<h1>all styles</h1>
 		<hr>
 		<br>
 		<div>
@@ -19,16 +19,16 @@
 				<thead>
 					<tr>
 
-						<th>genre</th>
+						<th>style</th>
 
 
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="genre" items="${catalog}">
+					<c:forEach var="style" items="${catalog}">
 						<tr>
 
-							<td><a href="getGenre.do?genre=${genre}">${genre}</a></td>
+							<td><a href="getStyle.do?style=${style}">${style}</a></td>
 					</c:forEach>
 				</tbody>
 			</table>
