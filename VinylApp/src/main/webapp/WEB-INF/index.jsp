@@ -18,17 +18,17 @@
 	<div>
 		<form action="getAlbum.do" method="GET">
 			by ID: <input type="text" name="aid" /> <input type="submit"
-				value=" ▶ " />
+				value=" go " />
 		</form>
 		<br>
 		<form action="searchTitle.do" method="GET">
 			by title: <input type="text" name="keyword" /> <input type="submit"
-				value=" ▶ " />
+				value=" go " />
 		</form>
 		<br>
 		<form action="searchArtist.do" method="GET">
 			by artist: <input type="text" name="keyword" /> <input type="submit"
-				value=" ▶ " />
+				value=" go " />
 		</form>
 	</div>
 

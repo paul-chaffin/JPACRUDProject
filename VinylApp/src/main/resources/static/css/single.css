@@ -1,0 +1,131 @@
+body {
+  background-color: teal;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 8px 8px 8px 8px;
+}
+
+ul{
+  list-style-type: circle;
+  /* list-style-position: outside; */
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 350px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+div {
+  font-size: 12px;
+  font-family: Geneva, sans-serif;
+  text-align: center;
+  color: white;
+  /* opacity: .8; */
+  border: 2px solid gray;
+  padding: 20px;
+  position: relative;
+}
+
+.tiny{
+  font-size: 12px;
+  font-family: Geneva, sans-serif;
+  text-align: left;
+  color: white;
+  width: 350px;
+  height: 0 auto;
+  margin: 15px auto;
+  border: none !important;
+}
+
+a:link{
+  color: yellow;
+  text-decoration: none;
+}
+
+a:visited{
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: Geneva, sans-serif;
+  color: white;
+  text-align: center;
+  border: 2px solid gray;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+h4{
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+label,
+input {
+  /* In order to define widths */
+  display: inline-block;
+}
+
+table {
+  width: 100%;
+  border: 2px solid;
+  /* border-collapse: collapse; */
+}
+
+td{
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid cyan;
+  border-collapse: collapse;
+}
+
+tr{
+  padding: 15px;
+  text-align: center;
+  border: 2px solid cyan;
+    border-collapse: collapse;
+  }
+
+tr:hover{
+  background-color: coral;
+}
+
+th{
+  text-align:center;
+  font-size: 12px;
+  border: 2px solid cyan;
+  border-collapse: collapse;
+}
